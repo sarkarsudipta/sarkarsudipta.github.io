@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudipta Sarkar – PhD Scholar</title>
+  <!-- Google Fonts: modern, clean -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f9fafc;
+      --surface-2: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-tertiary: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-light: #dbeafe;
+      --border: #e2e8f0;
+      --border-light: #f1f5f9;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.05);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --max-width: 1080px;
+      --header-height: 70px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-top: var(--header-height);
+    }
+
+    /* ---------- GLOBAL NAVIGATION ---------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
+
+    .navbar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-brand i {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s;
+    }
+
+    .nav-links a:hover {
+      background: var(--surface);
+      color: var(--text-primary);
+    }
+
+    .nav-links a.active {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- CONTAINER ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* ---------- PAGE HEADER ---------- */
+    .page-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .page-header .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ---------- PROFILE HERO (Home) ---------- */
+    .profile-hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .profile-avatar {
+      flex-shrink: 0;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .profile-info h1 {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.3rem;
+    }
+
+    .profile-info .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+
+    .profile-info .affiliation {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .profile-info .affiliation i {
+      color: var(--accent);
+      width: 1.1rem;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .social-row a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.15s ease;
+    }
+
+    .social-row a:hover {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- CARDS & SECTIONS ---------- */
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-title i {
+      color: var(--accent);
+      font-size: 1.35rem;
+    }
+
+    /* ---------- TIMELINE ---------- */
+    .timeline-list {
+      list-style: none;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 1.75rem;
+      padding-bottom: 1.5rem;
+      border-left: 2px solid var(--border);
+      margin-left: 0.5rem;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.5rem;
+      top: 0.3rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent-light);
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-text {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+    }
+
+    .timeline-text strong {
+      color: var(--text-primary);
+    }
+
+    /* ---------- EDU / EXP LISTS ---------- */
+    .stack-list {
+      list-style: none;
+    }
+
+    .stack-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .stack-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .stack-item .institution {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+    }
+
+    .stack-item .role {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin: 0.15rem 0 0.3rem;
+    }
+
+    .stack-item .degree {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .stack-item .details {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .stack-item .details p {
+      margin-top: 0.35rem;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.45rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      transition: all 0.15s;
+    }
+
+    .skill-tag:hover {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* ---------- PROJECT CARDS ---------- */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: #cbd5e1;
+      transform: translateY(-3px);
+    }
+
+    .project-card .project-title {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .project-card .project-meta {
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card .project-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .project-card .project-tools {
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .project-card .project-tools strong {
+      color: var(--text-secondary);
+    }
+
+    .project-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: auto;
+    }
+
+    .project-link:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    /* ---------- PUBLICATIONS ---------- */
+    .pub-list {
+      list-style: none;
+    }
+
+    .pub-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-authors {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-venue {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .pub-links {
+      margin-top: 0.4rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.75rem 0;
+    }
+
+    .contact-item i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      width: 1.5rem;
+      margin-top: 0.15rem;
+    }
+
+    .contact-item .label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .contact-item .value {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .map-container {
+      margin-top: 1.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 260px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 820px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 0.75rem 1.5rem 1.25rem;
+        gap: 0.25rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 0.65rem 1rem;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .profile-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .profile-avatar {
+        width: 120px;
+        height: 120px;
+      }
+
+      .profile-info h1 {
+        font-size: 2rem;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+
+      .profile-info h1 {
+        font-size: 1.7rem;
+      }
+
+      .profile-info .subtitle {
+        font-size: 1rem;
+      }
+
+      .page-header h1 {
+        font-size: 1.7rem;
+      }
+
+      .social-row a {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 1rem;
+      }
+
+      .profile-avatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* ---------- UTILITY ---------- */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .badge-new {
+      background: #dc2626;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+      margin-right: 0.4rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .text-muted {
+      color: var(--text-secondary);
+    }
+
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 1rem; }
+
+    /* ---------- HIDDEN PAGES ---------- */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="nav-brand" data-page="home">
+        <i class="fas fa-flask"></i> Sudipta Sarkar
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" data-page="home" class="active">Home</a></li>
+        <li><a href="#" data-page="about">About</a></li>
+		 <li><a href="#" data-page="education">Education</a></li>
+        <li><a href="#" data-page="research">Research</a></li>
+        <li><a href="#" data-page="publications">Publications</a></li>
+        <li><a href="#" data-page="teaching">Teaching & Talks</a></li>
+        <li><a href="#" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="container">
+
+    <!-- ============================================================ -->
+    <!-- PAGE: HOME                                                   -->
+    <!-- ============================================================ -->
+    <div id="page-home" class="page active">
+
+      <div class="profile-hero">
+        <img src="Rik.jpg" alt="Sudipta Sarkar" class="profile-avatar" />
+        <div class="profile-info">
+          <h1>Sudipta Sarkar</h1>
+          <div class="subtitle">PhD Scholar (Graduate Student) · Computational Data Science</div>
+          <div class="affiliation">
+            <span><i class="fas fa-university"></i> IISER Kolkata</span>
+            <span><i class="fas fa-map-pin"></i> Mohanpur, India</span>
+            <span><i class="fas fa-graduation-cap"></i> Advisor: Prof. Dwaipayan Roy</span>
+          </div>
+          <div class="social-row">
+            <a href="mailto:sudiptasarkar3600@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://drive.google.com/file/d/1fetGPzu8DJs21E63UI21Ovfid0S_vGaK/view?usp=drive_link" title="CV"><i class="fas fa-file-pdf"></i></a>
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://github.com/Rik-Sarkar-07" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/sudipta-sarkar-0665b5253/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/sarkar360000" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@Rik-Sarkar--CS" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- About preview -->
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-user"></i> About</h2>
+        <p class="text-muted">
+          I am a PhD scholar (graduate student) in the <a href="https://cds-iiserk.github.io/CDS/">Department of Computational and Data Sciences</a> at
+          <a href="https://www.iiserkol.ac.in/web/">IISER Kolkata</a>, advised by
+          <a href="https://dwaipayanroy.github.io/">Prof. Dwaipayan Roy</a>. My research interests lie at the intersection of
+          multimodal information retrieval, multimodal LLMs, and video understanding.
+        </p>
+        <p class="text-muted mt-1">
+          Previously, I worked as a Junior Research Fellow at <a href="https://cse.iitkgp.ac.in">IIT Kharagpur</a> with
+          <a href="https://cse.iitkgp.ac.in/~adas/">Prof. Abir Das</a>, focusing on resource-efficient video action recognition.
+          I completed my master's in Computer Science at <a href="https://rkmrc.in">Ramakrishna Mission Residential College, Narendrapur</a>
+          and my bachelor's at <a href="https://rkmvccrahara.org">RKM Vivekananda Centenary College, Rahara</a>.
+        </p>
+      </div>
+
+      <!-- Recent activities -->
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-clock"></i> Recent Activities</h2>
+        <ul class="timeline-list">
+          <li class="timeline-item">
+            <div class="timeline-date">August 8, 2026</div>
+            <div class="timeline-text">
+              <span class="badge-new">NEW</span> Our paper "Image Classifiers are Efficient Self-Supervised Video Representation Learners" was accepted at <strong>BMVC 2026</strong> (top-tier A conference).
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">August 3, 2026</div>
+            <div class="timeline-text">
+              Started PhD at <strong>IISER Kolkata</strong> in Computational and Data Sciences, advised by Dr. Dwaipayan Roy.
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">December 23, 2025</div>
+            <div class="timeline-text">
+              Awarded <strong>Best Postgraduate Student Award</strong> (AY 2023–2025) at RKMRC, Narendrapur.
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">November 12, 2025</div>
+            <div class="timeline-text">
+              Joined <strong>IIT Kharagpur</strong> as Junior Research Fellow in the CSE Department under Prof. Abir Das.
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">May 19, 2025</div>
+            <div class="timeline-text">
+              Final Semester Thesis Presentation and submission at RKMRC.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick research interests -->
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-microscope"></i> Research Interests</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">Multimedia Information Retrieval</span>
+          <span class="skill-tag">Multimodal Learning</span>
+          <span class="skill-tag">Multimodal LLMs</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Video Understanding</span>
+          <span class="skill-tag">Resource-Efficient Deep Learning</span>
+          <span class="skill-tag">Generative Models</span>
+          <span class="skill-tag">Representation Learning</span>
+        </div>
+      </div>
+
+    </div><!-- /page-home -->
+
+
+    <!-- ============================================================ -->
+    <!-- PAGE: ABOUT                                                  -->
+    <!-- ============================================================ -->
+    <div id="page-about" class="page">
+
+      <div class="page-header">
+        <h1>About</h1>
+        <div class="subtitle">A bit about my journey and background</div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-user"></i> Biography</h2>
+        <p class="text-muted">
+          My name is <b>Sudipta Sarkar (Rik)</b>, a strong follower of Swami Vivekananda, Thakur Shri Ramakrishna, and Holy Mother Sharada Devi.
+        </p>
+        <p class="text-muted mt-1">
+          I am currently pursuing my <b>PhD</b> in the <a href="https://cds-iiserk.github.io/CDS/">Department of Computational and Data Sciences (CDS)</a>
+          at <a href="https://www.iiserkol.ac.in/web/">IISER Kolkata</a> under the supervision of
+          <a href="https://dwaipayanroy.github.io/">Prof. Dwaipayan Roy</a>.
+        </p>
+        <p class="text-muted mt-1">
+          I previously worked as a <b>Junior Research Fellow (JRF)</b> at the <a href="https://cse.iitkgp.ac.in">Department of Computer Science and Engineering (CSE)</a>
+          at <a href="https://www.iitkgp.ac.in/">IIT Kharagpur</a> under the supervision of
+          <a href="https://cse.iitkgp.ac.in/~adas/">Prof. Abir Das</a>.
+        </p>
+        <p class="text-muted mt-1">
+          Before that, I completed my master's degree in Computer Science (June 2025) from
+          <a href="https://rkmrc.in">Ramakrishna Mission Residential College (Autonomous), Narendrapur</a>,
+          and I earned my bachelor's degree in Computer Science (Hons.) from
+          <a href="https://rkmvccrahara.org">Ramakrishna Mission Vivekananda Centenary College, Rahara</a>.
+          I have also qualified the <a href="https://ugcnet.nta.ac.in" target="_blank">UGC NET</a> examination for Assistant Professorship and Ph.D. eligibility under the June 2025 cycle.
+        </p>
+        <p class="text-muted mt-1">
+          During my five years of undergraduate and postgraduate studies, I had the opportunity to visit more than three Ramakrishna Mission Centers.
+          I deeply admire their philosophy, work, and spiritual ideologies. Throughout this period, I met many potential friends, teachers, and monks
+          who have continuously encouraged me to be a diligent learner and, more importantly, a good human being. I am truly grateful to all my friends,
+          teachers, family members, and especially to the monks, whose guidance has played a crucial role in shaping me into a better person.
+          Today, I strive not only to excel in the field of computing but also to grow spiritually and become a better individual in every aspect of life.
+        </p>
+        <p class="text-muted mt-1">
+          The name "Sudipta" (সুদীপ্ত) is of Sanskrit origin and is commonly used in Bengali-speaking regions. It is a combination of two Sanskrit words:
+          "Su" meaning "good," "auspicious," or "prosperous," and "Dipta" meaning "bright," "shining," or "illuminated."
+          Thus, Sudipta is often interpreted as "one who is brightly shining" (যে আলোকিতভাবে উজ্জ্বল) or "the one who is prosperous and enlightened" (যে সমৃদ্ধ ও জ্ঞানী).
+          It conveys the idea of someone who is radiant, intellectually bright, or blessed with success.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">C/C++ Programming</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Algorithm Design</span>
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Database Management</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Theoretical Computer Science</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">LaTeX</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-globe"></i> Languages & Interests</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div>
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">Languages</h4>
+            <ul class="stack-list" style="border: none;">
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;">Bengali – Native Proficiency</li>
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;">English – Professional Working Proficiency</li>
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;">Hindi – Elementary Proficiency</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">Interests</h4>
+            <ul class="stack-list" style="border: none;">
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;">Coding</li>
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;">Reading and Writing</li>
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;">Cricket</li>
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;"><a href="https://youtube.com/playlist?list=PLyJTkd9pRGPyTU9U8EgDEA-VSefINOrI6">Devotional Songs</a></li>
+              <li class="stack-item" style="border: none; padding-bottom: 0.25rem; margin-bottom: 0.25rem;"><a href="https://en.wikipedia.org/wiki/World_model_(artificial_intelligence)">World Models and AI Research</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-about -->
+
+
+    <!-- ============================================================ -->
+    <!-- PAGE: RESEARCH                                               -->
+    <!-- ============================================================ -->
+    <div id="page-research" class="page">
+
+      <div class="page-header">
+        <h1>Research</h1>
+        <div class="subtitle">Projects, interests, and ongoing work</div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-flask"></i> Research Interests</h2>
+        <p class="mb-2"><a href="https://drive.google.com/file/d/1opwx8S-6cd2N2znd_g4M3kgyamaJG_Yt/view?usp=sharing" target="_blank" style="font-weight: bold;">View My Research Statement</a></p>
+        <div class="skills-grid">
+          <span class="skill-tag">Multimedia Information Retrieval</span>
+          <span class="skill-tag">Multimodal Learning</span>
+          <span class="skill-tag">Multimodal LLMs</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Video Understanding</span>
+          <span class="skill-tag">Resource-Efficient Deep Learning</span>
+          <span class="skill-tag">Generative Models</span>
+          <span class="skill-tag">Representation Learning</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-code-branch"></i> Projects</h2>
+        <div class="project-grid">
+
+          <div class="project-card">
+            <div class="project-title">Resource-Efficient Learning for Video Scene Understanding (RLV)</div>
+            <div class="project-meta">JRF Project · IIT Kharagpur · 2025 – 2026</div>
+            <div class="project-desc">
+              Developing lightweight spatiotemporal models for efficient video scene parsing and action recognition.
+              Leveraging state-of-the-art architectures including DeiT, Reversible MViT, ATLAS, Swin Transformer, Hiera, and ViT baselines.
+              Key contributions include integration of FlashAttention-2 for faster and memory-efficient training, knowledge distillation from large pretrained models,
+              multimodal fusion (RGB + optical flow), and SIFAR-based video-to-image reformulation.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> PyTorch, FlashAttention-2, einops, ViT, MViT, RevMViT, Swin, Hiera, DeiT, ATLAS, DINOv3, SIFAR</div>
+            <div class="project-meta">Supervisor: Prof. Abir Das, IIT Kharagpur</div>
+            <a href="#" class="project-link"><i class="fas fa-link"></i> Details coming soon</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">GRTS: A Gated Residual Teacher–Student Framework</div>
+            <div class="project-meta">Independent Research · 2026</div>
+            <div class="project-desc">
+              Proposed a feature-level teacher–student refinement framework where a frozen self-supervised DINOv2 teacher provides stable semantic priors
+              and a trainable ResNet-50 student learns dataset-specific residuals via a learnable gated fusion mechanism.
+              Achieved 97.8% Top-1 accuracy on UC Merced and 96.8% on AID aerial image benchmarks.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> PyTorch, DINOv2, ResNet-50, Gated Residual Fusion</div>
+            <a href="https://github.com/Rik-Sarkar-07/GRTS" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Super Image for Efficient Large-Scale Video Action Recognition</div>
+            <div class="project-meta">M.Sc. Thesis · 2025 · Advisor: Prof. Abir Das</div>
+            <div class="project-desc">
+              Innovated a frame-aggregation pipeline using the SIFAR framework to recast video action recognition as image classification.
+              Frames are rearranged via einops into super-images (e.g., 3×3 grid of 224×224 frames → 672×672 or 4×4 grid → 896×896)
+              and processed with ImageNet-21K pretrained Hiera-ViT and ViT models. Achieved ~79% accuracy on Kinetics-400 and ~64% on Something-Something V2.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> PyTorch, Hiera Vision Transformer, ViT, SIFAR, einops</div>
+            <a href="https://github.com/Rik-Sarkar-07/SIFAR-Hiera" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Image Steganography and Steganalysis</div>
+            <div class="project-meta">RKMRC · 2024</div>
+            <div class="project-desc">
+              Developed a deep learning framework for stego/non-stego image classification. Extracted texture features using
+              Gray Level Co-occurrence Matrix (GLCM), followed by pretrained ResNet50 for feature encoding, LSTM for sequence modeling, and a classification head.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> PyTorch, ResNet50, LSTM, GLCM</div>
+            <div class="project-meta">Supervisors: Dr. Siddhartha Banerjee & Bibek Ranjan Ghosh</div>
+            <a href="#" class="project-link"><i class="fas fa-link"></i> Coming soon</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Facial Expression Recognition</div>
+            <div class="project-meta">B.Sc. Final Year Project · 2023</div>
+            <div class="project-desc">
+              Engineered a compact pretrained VGG16-based model for real-time detection of 7 facial emotions (anger, disgust, fear, happiness, sadness, surprise, neutral)
+              on the FER-2013 dataset. Emphasized quantization and low-resource optimization for potential mobile HCI deployment.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> TensorFlow, VGG16, CNN</div>
+            <div class="project-meta">Supervisors: Prof. Chayan Halder & Prof. Prasenjit Das</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/tree/main/Deep%20Learning/FER%20Project" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Nuclei Segmentation using UNet</div>
+            <div class="project-meta">Summer Project · 2023</div>
+            <div class="project-desc">
+              Adapted UNet architecture for efficient segmentation of cell nuclei in biomedical microscopy images and videos.
+              Explored potential extensions such as UNet++ and TransUNet for improved accuracy in resource-constrained settings.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> TensorFlow, UNet</div>
+            <div class="project-meta">Supervisor: Dr. Biswajit Biswas</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/tree/main/Deep%20Learning/Nuclei%20Segmentation%20using%20UNet" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Potato Disease Classification using CNN</div>
+            <div class="project-meta">Completed Feb 2023</div>
+            <div class="project-desc">
+              Classifies potato leaf diseases using deep learning to improve early detection and crop cultivation in agriculture.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> Python, Deep Learning, CNN</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/tree/main/Deep%20Learning/Potato%20Disease%20Classification%20using%20CNN" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Virtual Assistant Using OpenAI</div>
+            <div class="project-meta">Completed Nov 2022</div>
+            <div class="project-desc">
+              Developed a voice-interactive virtual assistant mimicking Amazon Alexa or Siri using the OpenAI API and Python libraries.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> Python, OpenAI API, pyttsx3, speech_recognition, webbrowser</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/blob/main/Projects/Virtual%20Assistant.py" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Number Tracking Game Using Backtracking Algorithms</div>
+            <div class="project-meta">Completed May 2022</div>
+            <div class="project-desc">
+              CLI-based game in C++ where players race to reach a target number using backtracking algorithms, designed for the machine to win if it selects first.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> C++</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/blob/main/Projects/NumberTracingGame.cpp" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Data Structure and Algorithm - Open Source</div>
+            <div class="project-meta">Completed May 2022</div>
+            <div class="project-desc">
+              Contributed to an open-source collection of data structure and algorithm implementations for B.Sc. Computer Science students per UGC syllabus.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> C++, Data Structures, Algorithms</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/tree/main/Data%20Structure" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Medical Store Billing Management System Software</div>
+            <div class="project-meta">Completed May 2021</div>
+            <div class="project-desc">
+              CLI-based billing system for medical stores developed in C++ during my first semester.
+            </div>
+            <div class="project-tools"><strong>Tools:</strong> C++</div>
+            <a href="https://github.com/Rik-Sarkar-07/Codes/blob/main/Projects/Medicalstorebillingsystem.cpp" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /page-research -->
+
+
+    <!-- ============================================================ -->
+    <!-- PAGE: PUBLICATIONS                                           -->
+    <!-- ============================================================ -->
+    <div id="page-publications" class="page">
+
+      <div class="page-header">
+        <h1>Publications</h1>
+        <div class="subtitle">Peer-reviewed papers and preprints</div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-book"></i> Conference Papers</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">Image Classifiers are Efficient Self-Supervised Video Representation Learners</div>
+            <div class="pub-authors">Owais Iqbal, <strong>Sudipta Sarkar</strong>, Shyam Marjit, Omprakash Chakraborty, Anirban Chakraborty, Abir Das</div>
+            <div class="pub-venue">The 37th British Machine Vision Conference (BMVC 2026) · Accepted</div>
+            <div class="pub-links">
+              <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="#"><i class="fas fa-link"></i> DOI</a>
+              <a href="#"><i class="fas fa-code"></i> Code</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-file-alt"></i> Preprints & Under Review</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">GRTS: A Gated Residual Teacher–Student Framework for Feature Refinement in Image Classification</div>
+            <div class="pub-authors"><strong>Sudipta Sarkar</strong></div>
+            <div class="pub-venue">Under review · 2026</div>
+            <div class="pub-links">
+              <a href="#"><i class="fas fa-link"></i> arXiv</a>
+              <a href="https://github.com/Rik-Sarkar-07/GRTS"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-graduation-cap"></i> Thesis</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">Super Image for Efficient Large-Scale Video Action Recognition</div>
+            <div class="pub-authors"><strong>Sudipta Sarkar</strong></div>
+            <div class="pub-venue">M.Sc. Thesis · Ramakrishna Mission Residential College · 2025</div>
+            <div class="pub-links">
+              <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://docs.google.com/presentation/d/109zfr3p5yWYreHuTToWwC5_OrdICUVqM/edit?usp=sharing" target="_blank"><i class="fas fa-link"></i> Slides</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /page-publications -->
+
+
+    <!-- ============================================================ -->
+    <!-- PAGE: TEACHING & TALKS                                       -->
+    <!-- ============================================================ -->
+    <div id="page-teaching" class="page">
+
+      <div class="page-header">
+        <h1>Teaching & Talks</h1>
+        <div class="subtitle">Presentations, seminars, and mentorship</div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-chalkboard-teacher"></i> Talks & Presentations</h2>
+        <ul class="stack-list">
+          <li class="stack-item">
+            <div class="institution">Seminar on Image Generation and Diffusion Models</div>
+            <div class="role">RKMRC, Narendrapur · May 17, 2025</div>
+            <div class="details">
+              <p>Delivered a seminar covering the foundations of diffusion models and their applications in image generation.</p>
+              <p><a href="https://docs.google.com/presentation/d/1Mu4Q2-N8_cnO33fOp0PG4J060ad2GmN5/edit?usp=sharing" target="_blank">View Seminar PPT</a></p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Final Semester Thesis Presentation</div>
+            <div class="role">RKMRC, Narendrapur · May 19, 2025</div>
+            <div class="details">
+              <p>Presented M.Sc. thesis on "Super Image for Efficient Large-Scale Video Action Recognition".</p>
+              <p><a href="https://docs.google.com/presentation/d/109zfr3p5yWYreHuTToWwC5_OrdICUVqM/edit?usp=sharing" target="_blank">View Presentation PPT</a></p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Technical Articles & Writings</div>
+            <div class="role">Ongoing</div>
+            <div class="details">
+              <p>Published technical articles covering Complexity Theory, Linear Algebra, Backpropagation, and Proof Methodologies.</p>
+              <p><a href="https://sudipta-rkmrc.github.io/website/technical-vlogs.html">Explore Technical Articles</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-users"></i> Teaching & Mentorship</h2>
+        <ul class="stack-list">
+          <li class="stack-item">
+            <div class="institution">Co-Organizer, Neuroverse Coding Competition</div>
+            <div class="role">RKMVC College, Rahara · March – April 2023</div>
+            <div class="details">
+              <p>Designed and curated problem sets for Neuroverse, a college-level coding competition.</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">IT Sub-Committee Member, Vidyarthi Sabha</div>
+            <div class="role">RKMRC, Narendrapur · Sept 2023 – Sept 2024</div>
+            <div class="details">
+              <p>Managed and provided IT consulting services as part of the Vidyarthi Sabha IT Sub-Committee.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /page-teaching -->
+
+
+    <!-- ============================================================ -->
+    <!-- PAGE: EDUCATION & EXPERIENCE                                 -->
+    <!-- ============================================================ -->
+    <div id="page-education" class="page">
+
+      <div class="page-header">
+        <h1>Education & Experience</h1>
+        <div class="subtitle">Academic background and professional roles</div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <ul class="stack-list">
+          <li class="stack-item">
+            <div class="institution">Indian Institute of Science Education and Research (IISER) – Kolkata</div>
+            <div class="role">Ph.D. in Computational and Data Sciences · August 2026 – Present</div>
+            <div class="details">
+              <p>Advisor: Prof. Dwaipayan Roy. Research focuses on Multimodal Information Retrieval, Multimodal Learning & Understanding, and Multimodal LLMs.</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Ramakrishna Mission Residential College (Autonomous), Narendrapur</div>
+            <div class="role">M.Sc. in Computer Science · Sept 2023 – June 2025</div>
+            <div class="details">
+              <p>CGPA: 9.95/10.00 (96.30%) — equivalent to 4.0/4.0 in US scale. Rank 1 (First Class First).</p>
+              <p>Specializing in advanced topics like Deep Learning, Computer Vision, and Algorithms. Affiliated with University of Calcutta.</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Ramakrishna Mission Vivekananda Centenary College, Rahara</div>
+            <div class="role">B.Sc. in Computer Science (Hons.) · Sept 2020 – May 2023</div>
+            <div class="details">
+              <p>CGPA: 9.72/10.00 (92.02%) — equivalent to 3.9/4.0 in US scale. Rank 3.</p>
+              <p>Studied core computer science subjects including Data Structures, Algorithms, and Database Systems. Affiliated with West Bengal State University (WBSU).</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Hogalbaria Adarsha Siksha Niketan (H.S.), Hogalbaria, Karimpur-I, Nadia</div>
+            <div class="role">High School (Science) · Jan 2012 – July 2020</div>
+            <div class="details">
+              <p>GPA: 83.00% (equivalent to A grade). Affiliated with WBCHSE. Rural school near India-Bangladesh border.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-briefcase"></i> Experience</h2>
+        <ul class="stack-list">
+          <li class="stack-item">
+            <div class="institution">IIT Kharagpur</div>
+            <div class="role">Junior Research Fellow · Nov 2025 – March 2026</div>
+            <div class="details">
+              <p>Department of Computer Science and Engineering. Project: Resource-Efficient Learning for Video Scene Understanding (RLV).</p>
+              <p>Advisor: Prof. Abir Das.</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">IIT Kharagpur</div>
+            <div class="role">Research Intern · Jan 2025 – Oct 2025</div>
+            <div class="details">
+              <p>Department of Computer Science and Engineering. Project: Resource-Efficient Learning for Video Scene Understanding (RLV).</p>
+              <p>Advisor: Prof. Abir Das.</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Ramakrishna Mission Residential College (Autonomous), Narendrapur</div>
+            <div class="role">IT Sub-Committee Member, Vidyarthi Sabha · Sept 2023 – Sept 2024</div>
+            <div class="details">
+              <p>Managed and provided IT consulting services as part of the Vidyarthi Sabha IT Sub-Committee.</p>
+            </div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Ramakrishna Mission Vivekananda Centenary College, Rahara</div>
+            <div class="role">Co-Organizer, Neuroverse Coding Competition · March 2023 – April 2023</div>
+            <div class="details">
+              <p>Designed and curated problem sets for Neuroverse, a college-level coding competition.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-trophy"></i> Achievements</h2>
+        <ul class="stack-list">
+          <li class="stack-item">
+            <div class="institution">Best Postgraduate Student Award (AY 2023–2025)</div>
+            <div class="details"><p>Ramakrishna Mission Residential College · Dec 2025</p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">UGC NET Qualified (99.83 percentile)</div>
+            <div class="details"><p>June 2025 cycle · July 2025</p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">1st Rank Holder in M.Sc.</div>
+            <div class="details"><p>Ramakrishna Mission Residential College · June 2025</p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">National Scholarship for Post Graduate Studies (AY 2023–2025)</div>
+            <div class="details"><p>Awarded to top 10,000 students across India annually · Oct 2024</p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">3rd Rank in RKMVERI M.Sc. Admission Test</div>
+            <div class="details"><p>June 2023</p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">3rd Rank Holder in B.Sc.</div>
+            <div class="details"><p>RKM Vivekananda Centenary College · May 2023</p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">1st Rank in Intra-College Coding Competition</div>
+            <div class="details"><p>May 2022</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-file-pdf"></i> Curriculum Vitae</h2>
+        <p class="text-muted mb-2">Access my detailed Curriculum Vitae for a complete record.</p>
+        <p><a href="https://drive.google.com/file/d/1fetGPzu8DJs21E63UI21Ovfid0S_vGaK/view?usp=drive_link" target="_blank">View CV on Google Drive</a></p>
+        <p><a href="https://drive.google.com/file/d/1fetGPzu8DJs21E63UI21Ovfid0S_vGaK/view?usp=drive_link" download>Download My Curriculum Vitae (CV)</a></p>
+      </div>
+
+    </div><!-- /page-education -->
+
+
+    <!-- ============================================================ -->
+    <!-- PAGE: CONTACT                                                -->
+    <!-- ============================================================ -->
+    <div id="page-contact" class="page">
+
+      <div class="page-header">
+        <h1>Contact</h1>
+        <div class="subtitle">Get in touch</div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-paper-plane"></i> Contact Information</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <div class="label">Email</div>
+                <div class="value"><a href="mailto:sudiptasarkar3600@gmail.com">sudiptasarkar3600@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <div>
+                <div class="label">GitHub</div>
+                <div class="value"><a href="https://github.com/Rik-Sarkar-07">https://github.com/Rik-Sarkar-07</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <div class="label">LinkedIn</div>
+                <div class="value"><a href="https://linkedin.com/in/sudipta-sarkar-0665b5253/">https://linkedin.com/in/sudipta-sarkar-0665b5253/</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-x-twitter"></i>
+              <div>
+                <div class="label">X (Twitter)</div>
+                <div class="value"><a href="https://x.com/sarkar360000">@sarkar360000</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-youtube"></i>
+              <div>
+                <div class="label">YouTube</div>
+                <div class="value"><a href="https://www.youtube.com/@Rik-Sarkar--CS">Rik Sarkar</a></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <div class="label">Current Address</div>
+                <div class="value">
+                  First Floor, Research Scholar Lab,<br>
+                  Department of Computational and Data Sciences (CDS),<br>
+                  IISER Kolkata, Mohanpur, Nadia,<br>
+                  West Bengal 741246, India
+                </div>
+              </div>
+            </div>
+            <div class="contact-item" style="margin-top: 1rem;">
+              <i class="fas fa-history"></i>
+              <div>
+                <div class="label">Old Address</div>
+                <div class="value" style="font-size:0.9rem;">
+                  Takshashila Building (2nd Floor, Research Scholar Lab),<br>
+                  IIT Kharagpur, Kharagpur, West Bengal 721302
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7360.484120770139!2d88.45684941209533!3d22.956280987017056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8e64d6b2d8b0f%3A0x59f8e64d6b2d8b0f!2sIISER%20Kolkata%20Mohanpur%20Campus!5e0!3m2!1sen!2sin!4v1698765432109"
+            allowfullscreen=""
+            loading="lazy"
+            title="IISER Kolkata Mohanpur Campus">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><i class="fas fa-address-book"></i> References</h2>
+        <ul class="stack-list">
+          <li class="stack-item">
+            <div class="institution">Dr. Chayan Halder</div>
+            <div class="details"><p>Assistant Professor, Department of Computer Science, RKM Vivekananda Centenary College, Rahara. Email: <a href="mailto:chayan.comp@rkmvccrahara.org">chayan.comp@rkmvccrahara.org</a></p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Dr. Siddhartha Banerjee</div>
+            <div class="details"><p>Associate Professor and Head of Department, RKMRC, Narendrapur. Email: <a href="mailto:sidd_01_02@yahoo.com">sidd_01_02@yahoo.com</a></p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Swami Iswarananda</div>
+            <div class="details"><p>Vice Principal, RKMRC, Narendrapur. Email: <a href="mailto:vp@rkmrc.in">vp@rkmrc.in</a></p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Swami Ekachittananda</div>
+            <div class="details"><p>Principal, RKMRC, Narendrapur. Email: <a href="mailto:rkmcnpur@gmail.com">rkmcnpur@gmail.com</a></p></div>
+          </li>
+          <li class="stack-item">
+            <div class="institution">Swami Vedanuragananda</div>
+            <div class="details"><p>Vice Principal, RKM Vivekananda Centenary College, Rahara. Email: <a href="mailto:bodhisattamj@gmail.com">bodhisattamj@gmail.com</a></p></div>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /page-contact -->
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 Sudipta Sarkar · Department of Computational and Data Sciences, IISER Kolkata</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+      <i class="fas fa-heart" style="color: #dc2626;"></i> Built with simplicity
+    </p>
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ---------- PAGE ROUTER ----------
+      const pages = document.querySelectorAll('.page');
+      const navLinks = document.querySelectorAll('[data-page]');
+      const navLinksContainer = document.getElementById('navLinks');
+      const navToggle = document.getElementById('navToggle');
+
+      function showPage(pageId) {
+        pages.forEach(page => page.classList.remove('active'));
+        const target = document.getElementById('page-' + pageId);
+        if (target) {
+          target.classList.add('active');
+        }
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.dataset.page === pageId);
+        });
+        navLinksContainer.classList.remove('open');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, '', '#' + pageId);
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const pageId = this.dataset.page;
+          if (pageId) {
+            showPage(pageId);
+          }
+        });
+      });
+
+      // ---------- MOBILE NAV TOGGLE ----------
+      navToggle.addEventListener('click', function() {
+        navLinksContainer.classList.toggle('open');
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!navLinksContainer.contains(e.target) && !navToggle.contains(e.target)) {
+          navLinksContainer.classList.remove('open');
+        }
+      });
+
+      // ---------- HANDLE INITIAL HASH ----------
+      function handleHash() {
+        const hash = window.location.hash.replace('#', '') || 'home';
+        const knownPages = ['home', 'about', 'research', 'publications', 'teaching', 'education', 'contact'];
+        if (knownPages.includes(hash)) {
+          showPage(hash);
+        } else {
+          showPage('home');
+        }
+      }
+
+      window.addEventListener('hashchange', handleHash);
+      handleHash();
+
+    })();
+  </script>
+
+</body>
+</html>
